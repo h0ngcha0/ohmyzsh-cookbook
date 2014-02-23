@@ -5,13 +5,13 @@ include_recipe "rvm::user"
 package "zsh"
 
 bash "Install ZSH" do
-  cwd "/home/ubuntu"
+  cwd "/home/hongchao.liu"
   code <<-EOC
-    su ubuntu
-    git clone git://github.com/robbyrussell/oh-my-zsh.git /home/ubuntu/.oh-my-zsh
-    cp /home/ubuntu/.oh-my-zsh/templates/zshrc.zsh-template /home/ubuntu/.zshrc
-    sed -i 's/ZSH_THEME\=.*/ZSH_THEME\=\"kolo\"/g' /home/ubuntu/.zshrc
-    sed -i '1i\\ source /etc/profile' /home/ubuntu/.zshrc
-    sudo chsh -s /bin/zsh ubuntu
+    su hongchao.liu
+    git clone git://github.com/robbyrussell/oh-my-zsh.git /home/hongchao.liu/.oh-my-zsh
+    cp /home/hongchao.liu/.oh-my-zsh/templates/zshrc.zsh-template /home/hongchao.liu/.zshrc
+    sed -i 's/ZSH_THEME\=.*/ZSH_THEME\=\"kolo\"/g' /home/hongchao.liu/.zshrc
+    sed -i '1i\\ source /etc/profile' /home/hongchao.liu/.zshrc
+    sudo chsh -s /bin/zsh hongchao.liu
   EOC
 end
